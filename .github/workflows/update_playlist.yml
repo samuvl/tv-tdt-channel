@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
+          # ⚠️ ELIMINADA LA LÍNEA: cache: 'pip'
       
       - name: 📦 Install dependencies
         run: |
@@ -27,27 +27,27 @@ jobs:
       - name: 🔍 Verificar archivos necesarios
         run: |
           if [ ! -f "build_playlist.py" ]; then
-            echo "❌ ERROR: build_playlist.py no encontrado"
+            echo "ERROR: build_playlist.py no encontrado"
             exit 1
           fi
           if [ ! -f "2-channels_list.txt" ]; then
-            echo "❌ ERROR: 2-channels_list.txt no encontrado"
+            echo "ERROR: 2-channels_list.txt no encontrado"
             exit 1
           fi
-          echo "✅ Archivos necesarios encontrados"
+          echo "Archivos necesarios encontrados"
       
       - name: 🎬 Generar playlist actualizada
         id: generate
         run: |
-          echo "🚀 Ejecutando build_playlist.py..."
+          echo "Ejecutando build_playlist.py..."
           python3 build_playlist.py
           
           if [ -f "lista_channels.m3u" ]; then
             CHANNEL_COUNT=$(grep -c "^http" lista_channels.m3u || echo "0")
-            echo "✅ Playlist generada con $CHANNEL_COUNT canales"
+            echo "Playlist generada con $CHANNEL_COUNT canales"
             echo "channel_count=$CHANNEL_COUNT" >> $GITHUB_OUTPUT
           else
-            echo "❌ ERROR: No se pudo generar lista_channels.m3u"
+            echo "ERROR: No se pudo generar lista_channels.m3u"
             exit 1
           fi
       
@@ -56,10 +56,10 @@ jobs:
         run: |
           if git diff --quiet lista_channels.m3u; then
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "ℹ️ No hay cambios en la playlist"
+            echo "No hay cambios en la playlist"
           else
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "🔄 Cambios detectados en la playlist"
+            echo "Cambios detectados en la playlist"
             git diff --stat lista_channels.m3u
           fi
       
@@ -74,16 +74,16 @@ jobs:
           TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S UTC')
           CHANNEL_COUNT="${{ steps.generate.outputs.channel_count }}"
           
-          git commit -m "🔄 Actualizar playlist IPTV - Timestamp: $TIMESTAMP - Canales: $CHANNEL_COUNT"
+          git commit -m "Actualizar playlist IPTV - $TIMESTAMP - Canales: $CHANNEL_COUNT"
           
           git push
           
-          echo "✅ Cambios publicados en GitHub"
+          echo "Cambios publicados en GitHub"
       
       - name: 📄 Mostrar contenido generado
         run: |
           echo "=============================================="
-          echo "Primeras 20 líneas de la playlist:"
+          echo "Primeras 20 lineas de la playlist:"
           echo "=============================================="
           head -20 lista_channels.m3u
       
