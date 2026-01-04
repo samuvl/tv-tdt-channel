@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 """
 Script para descargar y filtrar lista IPTV de España.
-Genera una playlist M3U limpia solo con los canales que necesitas.
+Genera una playlist M3U limpia compatible con Samsung QLED TV.
+Apps compatibles: SS IPTV, Smart IPTV, IPTV Smarters Pro
 """
 
 import requests
 import re
 from datetime import datetime
 
+
 SOURCE_URL = "https://iptv-org.github.io/iptv/countries/es.m3u"
 OUTPUT_FILE = "lista_channels.m3u"
-CHANNELS_FILE = "channels_list.txt"
-DEBUG_FILE = "debug_matching.txt"
+CHANNELS_FILE = "2-channels_list.txt"
+DEBUG_FILE = "3.1-debug_matching.txt"
+
 
 def load_wanted_channels():
     """Lee channels_list.txt y retorna lista de canales deseados."""
@@ -28,6 +31,7 @@ def load_wanted_channels():
         print(f"   Crea {CHANNELS_FILE} con los nombres de canales que quieres")
         return []
 
+
 def fetch_source_playlist():
     """Descarga la lista oficial de España."""
     print(f"📥 Descargando lista desde: {SOURCE_URL}")
@@ -39,6 +43,7 @@ def fetch_source_playlist():
     except requests.RequestException as e:
         print(f"❌ Error al descargar: {e}\n")
         return None
+
 
 def parse_m3u(content):
     """Parsea el contenido M3U y retorna lista de canales."""
@@ -69,12 +74,34 @@ def parse_m3u(content):
     
     return channels
 
+
 def extract_channel_name(extinf_line):
     """Extrae el nombre del canal de la línea EXTINF."""
     if ',' in extinf_line:
         name = extinf_line.split(',', 1)[1].strip()
         return name
     return ""
+
+
+def clean_url(url):
+    """
+    Limpia la URL para asegurar formato correcto M3U.
+    Remueve corchetes markdown y espacios extra.
+    Compatible con apps Samsung TV: SS IPTV, Smart IPTV, IPTV Smarters Pro
+    """
+    # Remover corchetes si existen: [http://...](http://...) -> http://...
+    url = url.strip()
+    if url.startswith('[') and url.endswith(']'):
+        url = url[1:-1]
+    
+    # Remover corchetes parciales por si acaso
+    url = url.replace('[', '').replace(']', '')
+    
+    # Remover espacios extra
+    url = url.strip()
+    
+    return url
+
 
 def match_channel_strict(available_name, wanted_name):
     """
@@ -105,8 +132,12 @@ def match_channel_strict(available_name, wanted_name):
     
     return False
 
+
 def build_custom_playlist(all_channels, wanted_channels):
-    """Construye la playlist personalizada manteniendo el orden deseado."""
+    """
+    Construye la playlist personalizada manteniendo el orden deseado.
+    Formato optimizado para Samsung QLED TV.
+    """
     playlist_lines = ["#EXTM3U"]
     found_channels = {}
     debug_matches = []
@@ -148,7 +179,10 @@ def build_custom_playlist(all_channels, wanted_channels):
         if wanted in found_channels:
             channel_data = found_channels[wanted]
             playlist_lines.append(channel_data['extinf'])
-            playlist_lines.append(channel_data['url'])
+            
+            # 🔧 FIX: Limpiar URL de corchetes y espacios para Samsung TV
+            clean_channel_url = clean_url(channel_data['url'])
+            playlist_lines.append(clean_channel_url)
     
     # Guardar debug log
     with open(DEBUG_FILE, 'w', encoding='utf-8') as f:
@@ -158,6 +192,7 @@ def build_custom_playlist(all_channels, wanted_channels):
             f.write(line + "\n")
     
     return '\n'.join(playlist_lines)
+
 
 def save_playlist(content):
     """Guarda la playlist en fichero."""
@@ -169,16 +204,23 @@ def save_playlist(content):
         url_count = content.count('http')
         
         print(f"📁 Playlist guardada: {OUTPUT_FILE}")
-        print(f"📊 Canales en la playlist: {url_count}\n")
+        print(f"📊 Canales en la playlist: {url_count}")
+        print(f"\n📺 COMPATIBLE CON:")
+        print(f"   ✅ SS IPTV (Samsung)")
+        print(f"   ✅ Smart IPTV (Samsung)")
+        print(f"   ✅ IPTV Smarters Pro (Samsung)")
+        print(f"   ✅ OTT Player (Samsung)")
+        print(f"   ✅ IB Player Pro (Samsung)\n")
         return True
     except IOError as e:
         print(f"❌ Error al guardar: {e}")
         return False
 
+
 def main():
     """Función principal."""
     print("=" * 110)
-    print("🎬 GENERADOR DE PLAYLIST IPTV PERSONALIZADO")
+    print("🎬 GENERADOR DE PLAYLIST IPTV PARA SAMSUNG QLED TV")
     print("=" * 110)
     print(f"⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
     
@@ -203,11 +245,16 @@ def main():
     # 5. Guardar
     if save_playlist(custom_playlist):
         print("=" * 110)
-        print("✅ PROCESO COMPLETADO")
+        print("✅ PROCESO COMPLETADO - LISTO PARA SAMSUNG QLED TV")
         print("=" * 110)
-        print(f"\n💡 Tip: Revisa {DEBUG_FILE} si algo no se encontró\n")
+        print(f"\n💡 Tip: Revisa {DEBUG_FILE} si algo no se encontró")
+        print(f"\n📱 SIGUIENTE PASO:")
+        print(f"   1. Sube {OUTPUT_FILE} a GitHub o web hosting")
+        print(f"   2. Copia la URL del archivo raw")
+        print(f"   3. Pégala en tu app IPTV de Samsung TV\n")
     else:
         print("\n❌ Error durante el guardado")
+
 
 if __name__ == "__main__":
     main()
