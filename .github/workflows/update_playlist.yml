@@ -17,7 +17,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          # ⚠️ ELIMINADA LA LÍNEA: cache: 'pip'
       
       - name: 📦 Install dependencies
         run: |
@@ -26,8 +25,8 @@ jobs:
       
       - name: 🔍 Verificar archivos necesarios
         run: |
-          if [ ! -f "build_playlist.py" ]; then
-            echo "ERROR: build_playlist.py no encontrado"
+          if [ ! -f "3-build_playlist.py" ]; then
+            echo "ERROR: 3-build_playlist.py no encontrado"
             exit 1
           fi
           if [ ! -f "2-channels_list.txt" ]; then
@@ -39,8 +38,8 @@ jobs:
       - name: 🎬 Generar playlist actualizada
         id: generate
         run: |
-          echo "Ejecutando build_playlist.py..."
-          python3 build_playlist.py
+          echo "Ejecutando 3-build_playlist.py..."
+          python3 3-build_playlist.py
           
           if [ -f "lista_channels.m3u" ]; then
             CHANNEL_COUNT=$(grep -c "^http" lista_channels.m3u || echo "0")
@@ -69,7 +68,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          git add lista_channels.m3u 3.1-debug_matching.txt
+          git add lista_channels.m3u 3.1-build_playlist_debug.txt
           
           TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S UTC')
           CHANNEL_COUNT="${{ steps.generate.outputs.channel_count }}"
@@ -104,5 +103,5 @@ jobs:
           name: playlist-generada
           path: |
             lista_channels.m3u
-            3.1-debug_matching.txt
+            3.1-build_playlist_debug.txt
           retention-days: 7
