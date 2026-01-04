@@ -1,0 +1,413 @@
+CANALES DISPONIBLES EN ESPAÑA (iptv-org)
+Actualizado: 2026-01-04
+Total: 264 canales
+
+INSTRUCCIONES:
+1. Busca el canal que quieres en esta lista
+2. Copia el nombre EXACTO (columna 'Nombre del Canal')
+3. Pégalo en channels_list.txt
+
+
+================================================================================
+GRUPO: Animation
+================================================================================
+  • Anime Vision (1080p)
+  • Anime Vision Classics (1080p)
+  • Anime Zone TV (480p)
+
+================================================================================
+GRUPO: Animation;Kids;Public
+================================================================================
+  • SX3 (1080p) [Geo-blocked]
+
+================================================================================
+GRUPO: Business
+================================================================================
+  • Negocios TV (1080p)
+
+================================================================================
+GRUPO: Classic;Comedy;Public;Series
+================================================================================
+  • 3Cat Plats bruts (1080p)
+
+================================================================================
+GRUPO: Comedy
+================================================================================
+  • Comedia Made in Spain (720p) [Not 24/7]
+  • FailArmy Spain
+  • Pluto TV Series Comedia (360p)
+  • Pluto TV Vaya semanita (720p)
+
+================================================================================
+GRUPO: Comedy;Public
+================================================================================
+  • 3Cat El búnquer (1080p)
+
+================================================================================
+GRUPO: Cooking
+================================================================================
+  • Pluto TV Cocina (720p) [Not 24/7]
+
+================================================================================
+GRUPO: Culture
+================================================================================
+  • Condavisión (1080p) [Not 24/7]
+  • Hamaika Telebista (1080p)
+
+================================================================================
+GRUPO: Culture;Public
+================================================================================
+  • ETB Basque (480p)
+  • El 33 (1080p) [Geo-blocked]
+  • El 33 Originals (1080p) [Not 24/7]
+
+================================================================================
+GRUPO: Documentary
+================================================================================
+  • NatureTime (1080p)
+  • Pluto TV Archivos Forenses (720p)
+
+================================================================================
+GRUPO: Education
+================================================================================
+  • Platzi TV (1080p)
+
+================================================================================
+GRUPO: Entertainment
+================================================================================
+  • Ciudades Del Ocio TV (720p)
+  • Energy (1080p)
+  • FDF (1080p)
+  • HOLA! Play (1080p)
+  • IberoAmerica TV (1080p)
+  • La Sexta (1080p)
+  • Mega (1080p)
+  • Neox (1080p)
+  • ROTV Valencia (720p)
+  • Univers TV (720p)
+  • XPTV2 (720p)
+
+================================================================================
+GRUPO: Entertainment;Music
+================================================================================
+  • Radio Carnaval TV (720p) [Not 24/7]
+
+================================================================================
+GRUPO: Family
+================================================================================
+  • The Pet Collective
+
+================================================================================
+GRUPO: Family;Movies
+================================================================================
+  • Rakuten TV Family Movies Spain (1080p)
+
+================================================================================
+GRUPO: General
+================================================================================
+  • 101tv Axarquia (480p)
+  • 101tv Cádiz (1080p)
+  • 101tv Ronda (1080p)
+  • 28 kanala
+  • 7 TeleValencia (576p)
+  • 8 La Marina TV (576p)
+  • 9 la Loma TV (1080p) [Geo-blocked]
+  • Alacantí TV (576p) [Not 24/7]
+  • Alcarria TV (576p) [Not 24/7]
+  • Antena 3 (1080p)
+  • Arabí TV (1080p)
+  • BCN Gospel TV (1080p)
+  • Burriana TV (720p)
+  • Canal 3 Biar (480p) [Not 24/7]
+  • Canal 4 Catalunya (1080p)
+  • Canal 4 Mallorca (1080p)
+  • Canal Coín (1080p)
+  • Canal Luz Televisión (1080p)
+  • Canal Málaga RTV (720p) [Not 24/7]
+  • Canal San Roque (1080p) [Not 24/7]
+  • Canal Sierra de Cádiz (1080p) [Not 24/7]
+  • Costa Noroeste TV (1080p) [Not 24/7]
+  • Cuatro (1080p)
+  • Diez TV Las Villas (1080p)
+  • Diez TV Úbeda (1080p)
+  • Distrito TV (1080p)
+  • Durangaldeko Telebista (576p)
+  • El Toro TV (720p)
+  • Empordà TV (1080p)
+  • Este Canal TV (576p)
+  • Fibwi (1080p) [Not 24/7]
+  • Fitel TV (1080p)
+  • Fuerteventura TV (1080p)
+  • Guada TV (720p) [Not 24/7]
+  • Huelva TV (720p)
+  • Imás TV (1080p) [Not 24/7]
+  • Interalmeria TV (1080p)
+  • Intercomarcal TV (576p) [Not 24/7]
+  • LaOtra (720p)
+  • Lancelot TV (404p)
+  • Maestrat TV (1080p)
+  • Mar TV (1080p)
+  • Mijas 3.40TV (720p)
+  • Noroeste TV (1080p) [Not 24/7]
+  • Onda Algeciras TV (576p)
+  • Onda Cádiz 24h (720p)
+  • Onda Madrid (720p)
+  • PTV Almería (1080p)
+  • PTV Córdoba (1080p)
+  • PTV Granada (720p)
+  • PTV Linares (720p)
+  • PTV Sevilla (1080p)
+  • Pirineus TV (1080p)
+  • Ribera TV (576p)
+  • Rioja Televisión (360p) [Not 24/7]
+  • Ràdio Bocairent TV (1080p) [Not 24/7]
+  • TV Almassora (1080p)
+  • TV BRICS Spanish (1080p)
+  • TV San Vicente (1080p)
+  • TVG2 (720p) [Geo-blocked]
+  • TVReus (720p) [Not 24/7]
+  • Tele Elx (1080p)
+  • Telecinco (1080p)
+  • Telemadrid Internacional (720p)
+  • Urola Telebista (416p)
+
+================================================================================
+GRUPO: General;News
+================================================================================
+  • Canal 1 Mar Menor-Torre Pacheco (1080p)
+
+================================================================================
+GRUPO: General;Public
+================================================================================
+  • A Punt
+  • Andalucía Televisión (1080p)
+  • Aragon TV (720p)
+  • Bon Dia TV (1080p)
+  • Canal Extremadura (576p) [Not 24/7]
+  • Canal Sur (1080p)
+  • Canal Sur Andalucia (1080p)
+  • Canal Sur Andalucía 2 (720p)
+  • ETB 1 (720p)
+  • ETB 2 (720p)
+  • Galicia TV Europa (720p)
+  • La 1 (720p)
+  • La 1 Canarias (720p)
+  • La 1 Catalunya (720p)
+  • La 1 HEVC (1080p)
+  • La 1 UHD (2160p)
+  • La 2 (1080p)
+  • La 2 Canarias (720p)
+  • La 2 Catalunya (720p)
+
+================================================================================
+GRUPO: Kids
+================================================================================
+  • Pluto TV Kids (720p) [Not 24/7]
+  • Pluto TV Toons Clásico (720p)
+
+================================================================================
+GRUPO: Kids;Public
+================================================================================
+  • Clan (1280p)
+
+================================================================================
+GRUPO: Kids;Religious
+================================================================================
+  • Logos TV Kids (720p) [Not 24/7]
+
+================================================================================
+GRUPO: Legislative
+================================================================================
+  • Canal Parlamento (360p) [Not 24/7]
+  • Congreso de los Diputados 1 (360p) [Not 24/7]
+  • Congreso de los Diputados 2 (360p) [Not 24/7]
+  • Congreso de los Diputados 3 (360p) [Not 24/7]
+  • Congreso de los Diputados 4 (360p) [Not 24/7]
+  • Congreso de los Diputados 5 (360p) [Not 24/7]
+  • Corts Valencianes (480p) [Not 24/7]
+  • Parlamento de Andalucía (576p) [Not 24/7]
+  • Parlamento de Navarra (368p) [Not 24/7]
+
+================================================================================
+GRUPO: Lifestyle
+================================================================================
+  • Divinity (1080p)
+  • Logos TV Salud (720p) [Not 24/7]
+  • Nova (1080p)
+
+================================================================================
+GRUPO: Movies
+================================================================================
+  • Bom Cine (1080p)
+  • MyTime movie network Spain (1080p)
+  • Pluto TV Cine Acción (720p)
+  • Pluto TV Cine Clásico (720p)
+  • Pluto TV Cine Estelar (720p)
+  • Pluto TV Cine Estelar Spain+
+  • Pluto TV Thrillers Spain
+  • Rakuten TV Action Movies Spain (1080p)
+  • Rakuten TV Comedy Movies Spain (1080p)
+  • Rakuten TV Drama Movies Spain (1080p)
+  • Rakuten TV Top Movies Spain (1080p)
+  • Zylo Cine Friki (1080p)
+  • Zylo Cine Western (1080p) [Geo-blocked]
+
+================================================================================
+GRUPO: Movies;Series
+================================================================================
+  • Squirrel (1080p)
+  • Veo7 (1080p)
+
+================================================================================
+GRUPO: Music
+================================================================================
+  • Activa TV (720p)
+  • Cadena Elite (720p) [Not 24/7]
+  • La Urban TV (1080p) [Not 24/7]
+  • LiraTV (720p)
+  • Molahits TV (720p)
+  • POP World TV (720p)
+  • Pequeradio (720p) [Not 24/7]
+  • Pluto TV MTV Music Made in Spain (720p) [Not 24/7]
+  • RTV Vida (1080p)
+  • STZ Telebista (1080p)
+  • Sol Música (720p)
+  • SpektraTV (720p)
+  • TVOMIX (1080p)
+  • Viva Murcia TV (720p)
+  • XPTV1 (720p)
+
+================================================================================
+GRUPO: Music;News
+================================================================================
+  • Onda 15 TV (224p)
+  • Onda Valencia (720p)
+
+================================================================================
+GRUPO: News
+================================================================================
+  • Córdoba TV [Not 24/7]
+  • EL PAÍS TV (1080p)
+  • El Confidencial TV (1080p)
+  • France 24 Español (1080p)
+  • M95 Televisión Marbella (1080p) [Not 24/7]
+  • Mírame TV (360p) [Not 24/7]
+  • RT en Español (1080p) [Geo-blocked]
+
+================================================================================
+GRUPO: News;Public
+================================================================================
+  • 24 Horas (1080p)
+  • 24 Horas Internacional
+  • 3Cat Exclusiu 1 (1080p) [Geo-blocked]
+  • 3Cat Exclusiu 2 (1080p) [Geo-blocked]
+  • 3Cat Exclusiu 3 (1080p) [Geo-blocked]
+  • 3CatInfo (1080p)
+  • Canal 24 Horas Canarias (720p)
+  • Canal 24 Horas Catalunya (720p)
+  • Canal Sur Noticias
+
+================================================================================
+GRUPO: Public;Sports
+================================================================================
+  • Esport3 (1080p) [Geo-blocked]
+  • Esport3 (1080p) [Not 24/7]
+
+================================================================================
+GRUPO: Public;Weather
+================================================================================
+  • 3Cat Càmeres del temps (1080p)
+
+================================================================================
+GRUPO: Religious
+================================================================================
+  • Angel TV Spanish (720p)
+  • Cetelmón TV (404p)
+  • Cristiana TV (576p)
+  • EWTN Spain & Latin America (720p)
+  • KTO (404p) [Not 24/7]
+  • Logos TV (1080p) [Not 24/7]
+  • Logos TV Estudio (720p) [Not 24/7]
+  • TBN España (576p)
+  • Tarotéame (576p)
+  • Televisión Consciente (1080p)
+  • Trece (1080p)
+
+================================================================================
+GRUPO: Series
+================================================================================
+  • Atreseries (1080p)
+  • Atreseries Internacional (1080p)
+  • BBC Drama (720p)
+  • Pluto TV Asesinatos de Midsomer (720p)
+  • Pluto TV Curro Jiménez (720p)
+  • Pluto TV El Encantador de Perros (720p)
+  • Pluto TV Empeños a lo bestia (720p) [Not 24/7]
+  • Pluto TV Los archivos del FBI (720p)
+  • Pluto TV MTV Tattoo A Dos (720p)
+  • Pluto TV Telenovelas (720p)
+  • Squirrel 2 (1080p)
+  • XPTV US (720p)
+  • Zylo Todo Novelas (1080p) [Geo-blocked]
+
+================================================================================
+GRUPO: Sports
+================================================================================
+  • Barca TV
+  • FIFA+ Spain (720p)
+  • Gol Classics
+  • Olympic Channel [Geo-blocked]
+  • Real Madrid TV (1080p)
+  • Teledeporte (1080p)
+
+================================================================================
+GRUPO: Undefined
+================================================================================
+  • Bailén TV (720p) [Not 24/7]
+  • Be Mad (1080p)
+  • Betevé (1080p)
+  • Biosfera TV (720p) [Not 24/7]
+  • Canal 10 Empordà (360p) [Not 24/7]
+  • Canal 2000 La Solana (720p) [Not 24/7]
+  • Canal 25 TV (1080p)
+  • Canal 33 Madrid
+  • Canal 4 Mancha Centro (720p) [Not 24/7]
+  • Canal 45 (576p)
+  • Canal 56 (576p) [Not 24/7]
+  • Canal Diocesano (576p)
+  • Canal Doñana (720p) [Not 24/7]
+  • CanalCosta (1080p)
+  • Cancionero TV (360p)
+  • Elche 7 TV (576p)
+  • Estepona Televisión (720p)
+  • Goiena Eus (720p)
+  • NORTEvisión (1080p)
+  • PTV Málaga (1080p)
+  • Piera TV (720p) [Not 24/7]
+  • Popular TV Melilla (1080p) [Not 24/7]
+  • Punt 3 Vall Uixó (1080p)
+  • RTV Marbella (720p)
+  • Radio Televisión Mogán (1080p)
+  • Rakuten Viki (1080p)
+  • Sal Televisión (720p)
+  • Sevilla FC TV (360p) [Not 24/7]
+  • Solidaria TV (720p)
+  • TEN (1080p)
+  • TV Artequatre (576p)
+  • TV Girona (1080p)
+  • TV3 (1080p) [Geo-blocked]
+  • TV3CAT (1080p) [Geo-blocked]
+  • TV3CAT Originals (1080p)
+  • TVCentro Andalucía (720p) [Not 24/7]
+  • TVM Córdoba (1080p) [Not 24/7]
+  • Tele Safor (720p) [Not 24/7]
+  • TeleRibera (720p) [Not 24/7]
+  • Teleganés (720p)
+  • Telemadrid (720p)
+  • Telemotril (720p) [Not 24/7]
+  • Teleonuba (1080p)
+  • Televisión Aranda (720p)
+  • Tuya La Janda Televisión (1080p)
+  • Une Vinalopó (576p) [Not 24/7]
+  • Ventdelnord TV (404p)
+  • Vivamóvil (720p)
