@@ -53,3 +53,31 @@ Una lista M3U personalizada con tus canales preferidos de IPTV-ORG, actualizada 
 1. Abre la app IPTV Smarters Pro (o Flix IPTV)
 2. Selecciona **"Add Playlist"** o **"New Playlist"**
 3. Pega esta URL:
+https://raw.githubusercontent.com/TU_USUARIO/tv-playlist/main/lista_abuela.m3u
+4. Presiona OK y espera a que cargue (30-60 segundos)
+5. ¡Disfruta de tus canales! 📺
+
+### Si la URL es muy larga:
+
+Usa un acortador (bit.ly, tinyurl.com) para simplificar.
+
+Ejemplo:
+
+## 🔄 Actualización Automática
+
+La playlist se **actualiza automáticamente cada día a las 03:00 CET** mediante GitHub Actions.
+
+Si quieres forzar una actualización manual:
+1. Ve a la pestaña **"Actions"** en GitHub
+2. Selecciona **"Update TV Playlist"**
+3. Haz clic en **"Run workflow"**
+4. Espera ~1 minuto
+
+## 📝 Para modificar los canales
+
+Edita **`channels_list.txt`** con tus canales preferidos y haz un commit:
+
+```bash
+git add channels_list.txt
+git commit -m "Update: Canales personalizados"
+git push

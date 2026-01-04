@@ -9,7 +9,7 @@ import re
 from datetime import datetime
 
 SOURCE_URL = "https://iptv-org.github.io/iptv/countries/es.m3u"
-OUTPUT_FILE = "lista_abuela.m3u"
+OUTPUT_FILE = "lista_channels.m3u"
 CHANNELS_FILE = "channels_list.txt"
 DEBUG_FILE = "debug_matching.txt"
 
