@@ -1,7 +1,6 @@
 name: 🔄 Actualizar Playlist IPTV
 
 on:
-  # Solo ejecución manual desde GitHub Actions
   workflow_dispatch:
 
 jobs:
@@ -43,7 +42,6 @@ jobs:
           echo "🚀 Ejecutando build_playlist.py..."
           python3 build_playlist.py
           
-          # Verificar que se generó el archivo
           if [ -f "lista_channels.m3u" ]; then
             CHANNEL_COUNT=$(grep -c "^http" lista_channels.m3u || echo "0")
             echo "✅ Playlist generada con $CHANNEL_COUNT canales"
@@ -56,11 +54,11 @@ jobs:
       - name: 📊 Verificar cambios
         id: check_changes
         run: |
-          git diff --quiet lista_channels.m3u || echo "changed=true" >> $GITHUB_OUTPUT
-          
           if git diff --quiet lista_channels.m3u; then
+            echo "changed=false" >> $GITHUB_OUTPUT
             echo "ℹ️ No hay cambios en la playlist"
           else
+            echo "changed=true" >> $GITHUB_OUTPUT
             echo "🔄 Cambios detectados en la playlist"
             git diff --stat lista_channels.m3u
           fi
@@ -71,18 +69,12 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # Añadir archivos generados
           git add lista_channels.m3u 3.1-debug_matching.txt
           
-          # Crear commit con información detallada
           TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S UTC')
           CHANNEL_COUNT="${{ steps.generate.outputs.channel_count }}"
           
-          git commit -m "🔄 Actualizar playlist IPTV
-
-- Timestamp: $TIMESTAMP
-- Canales: $CHANNEL_COUNT
-- Actualización manual ejecutada desde GitHub Actions"
+          git commit -m "🔄 Actualizar playlist IPTV - Timestamp: $TIMESTAMP - Canales: $CHANNEL_COUNT"
           
           git push
           
@@ -90,25 +82,20 @@ jobs:
       
       - name: 📄 Mostrar contenido generado
         run: |
-          echo "================================================"
-          echo "📺 CONTENIDO DE LA PLAYLIST GENERADA"
-          echo "================================================"
-          echo ""
-          echo "Primeras 10 líneas:"
+          echo "=============================================="
+          echo "Primeras 20 líneas de la playlist:"
+          echo "=============================================="
           head -20 lista_channels.m3u
-          echo ""
-          echo "================================================"
       
       - name: ✅ Resumen de ejecución
         if: always()
         run: |
-          echo "================================================"
-          echo "📊 RESUMEN DE ACTUALIZACIÓN"
-          echo "================================================"
-          echo "🕐 Fecha: $(date '+%Y-%m-%d %H:%M:%S')"
-          echo "📺 Canales: ${{ steps.generate.outputs.channel_count }}"
-          echo "🔄 Cambios: ${{ steps.check_changes.outputs.changed == 'true' && 'SÍ' || 'NO' }}"
-          echo "================================================"
+          echo "=============================================="
+          echo "RESUMEN:"
+          echo "Fecha: $(date '+%Y-%m-%d %H:%M:%S')"
+          echo "Canales: ${{ steps.generate.outputs.channel_count }}"
+          echo "Cambios: ${{ steps.check_changes.outputs.changed }}"
+          echo "=============================================="
       
       - name: 📤 Upload artifacts
         if: always()
