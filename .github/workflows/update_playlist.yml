@@ -1,0 +1,121 @@
+name: 🔄 Actualizar Playlist IPTV
+
+on:
+  # Solo ejecución manual desde GitHub Actions
+  workflow_dispatch:
+
+jobs:
+  update-playlist:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      
+      - name: 🔍 Verificar archivos necesarios
+        run: |
+          if [ ! -f "build_playlist.py" ]; then
+            echo "❌ ERROR: build_playlist.py no encontrado"
+            exit 1
+          fi
+          if [ ! -f "2-channels_list.txt" ]; then
+            echo "❌ ERROR: 2-channels_list.txt no encontrado"
+            exit 1
+          fi
+          echo "✅ Archivos necesarios encontrados"
+      
+      - name: 🎬 Generar playlist actualizada
+        id: generate
+        run: |
+          echo "🚀 Ejecutando build_playlist.py..."
+          python3 build_playlist.py
+          
+          # Verificar que se generó el archivo
+          if [ -f "lista_channels.m3u" ]; then
+            CHANNEL_COUNT=$(grep -c "^http" lista_channels.m3u || echo "0")
+            echo "✅ Playlist generada con $CHANNEL_COUNT canales"
+            echo "channel_count=$CHANNEL_COUNT" >> $GITHUB_OUTPUT
+          else
+            echo "❌ ERROR: No se pudo generar lista_channels.m3u"
+            exit 1
+          fi
+      
+      - name: 📊 Verificar cambios
+        id: check_changes
+        run: |
+          git diff --quiet lista_channels.m3u || echo "changed=true" >> $GITHUB_OUTPUT
+          
+          if git diff --quiet lista_channels.m3u; then
+            echo "ℹ️ No hay cambios en la playlist"
+          else
+            echo "🔄 Cambios detectados en la playlist"
+            git diff --stat lista_channels.m3u
+          fi
+      
+      - name: 📝 Commit y Push cambios
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # Añadir archivos generados
+          git add lista_channels.m3u 3.1-debug_matching.txt
+          
+          # Crear commit con información detallada
+          TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S UTC')
+          CHANNEL_COUNT="${{ steps.generate.outputs.channel_count }}"
+          
+          git commit -m "🔄 Actualizar playlist IPTV
+
+- Timestamp: $TIMESTAMP
+- Canales: $CHANNEL_COUNT
+- Actualización manual ejecutada desde GitHub Actions"
+          
+          git push
+          
+          echo "✅ Cambios publicados en GitHub"
+      
+      - name: 📄 Mostrar contenido generado
+        run: |
+          echo "================================================"
+          echo "📺 CONTENIDO DE LA PLAYLIST GENERADA"
+          echo "================================================"
+          echo ""
+          echo "Primeras 10 líneas:"
+          head -20 lista_channels.m3u
+          echo ""
+          echo "================================================"
+      
+      - name: ✅ Resumen de ejecución
+        if: always()
+        run: |
+          echo "================================================"
+          echo "📊 RESUMEN DE ACTUALIZACIÓN"
+          echo "================================================"
+          echo "🕐 Fecha: $(date '+%Y-%m-%d %H:%M:%S')"
+          echo "📺 Canales: ${{ steps.generate.outputs.channel_count }}"
+          echo "🔄 Cambios: ${{ steps.check_changes.outputs.changed == 'true' && 'SÍ' || 'NO' }}"
+          echo "================================================"
+      
+      - name: 📤 Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playlist-generada
+          path: |
+            lista_channels.m3u
+            3.1-debug_matching.txt
+          retention-days: 7
