@@ -4,7 +4,7 @@
 # IMPORTANTE: El ORDEN de este archivo determina la NUMERACIÓN
 # Línea 1 = Canal 001, Línea 2 = Canal 002, etc.
 #================================================================================
-
+La 1 (720p)
 La 1 (720p)
 La 2 (1080p)
 Antena 3 (1080p)
