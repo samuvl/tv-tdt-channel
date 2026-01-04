@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Test IPTV M3U - Samsung QLED Preview</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 { font-size: 2em; margin-bottom: 10px; }
+        .subtitle { opacity: 0.9; font-size: 1.1em; }
+        .main-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 0;
+            min-height: 600px;
+        }
+        .sidebar {
+            background: #f8f9fa;
+            border-right: 2px solid #dee2e6;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+        .upload-section {
+            padding: 20px;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+        .file-input-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .file-input-label {
+            background: #667eea;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .file-input-label:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        .channels-list { padding: 10px; }
+        .channel-group { margin-bottom: 20px; }
+        .group-title {
+            background: #e9ecef;
+            padding: 8px 12px;
+            font-weight: bold;
+            color: #495057;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+        .channel-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+            margin: 4px 0;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s;
+            font-size: 0.95em;
+            color: #212529;
+        }
+        .channel-btn:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+        .channel-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            font-weight: bold;
+        }
+        .player-section {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #videoPlayer {
+            width: 100%;
+            border-radius: 12px;
+            background: #000;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.95em;
+        }
+        .status.info {
+            background: #e7f3ff;
+            color: #004085;
+            border-left: 4px solid #0066cc;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border-left: 4px solid #28a745;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border-left: 4px solid #dc3545;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 0.85em;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Test IPTV M3U Player</h1>
+            <p class="subtitle">Prueba tu playlist antes de subirla a Samsung QLED TV</p>
+        </header>
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="upload-section">
+                    <div class="file-input-wrapper">
+                        <label class="file-input-label">
+                            📁 Cargar lista_channels.m3u
+                            <input type="file" id="m3uFile" accept=".m3u,.m3u8">
+                        </label>
+                    </div>
+                </div>
+                <div class="channels-list" id="channelsList">
+                    <div class="status info">👆 Carga tu archivo M3U para comenzar</div>
+                </div>
+            </aside>
+            <main class="player-section">
+                <video id="videoPlayer" controls></video>
+                <div id="status" class="status info">ℹ️ Selecciona un canal de la lista para reproducir</div>
+                <div class="stats" id="stats" style="display: none;">
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalChannels">0</div>
+                        <div class="stat-label">Canales totales</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="currentChannel">-</div>
+                        <div class="stat-label">Canal actual</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="playbackStatus">⏸️</div>
+                        <div class="stat-label">Estado</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        let channels = [];
+        let currentHls = null;
+        let currentButton = null;
+        
+        document.getElementById('m3uFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    parseM3U(event.target.result);
+                };
+                reader.readAsText(file);
+            }
+        });
+        
+        function parseM3U(content) {
+            channels = [];
+            const lines = content.split('\n');
+            
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line.startsWith('#EXTINF')) {
+                    const nameMatch = line.match(/,(.+)$/);
+                    const groupMatch = line.match(/group-title="([^"]+)"/);
+                    const name = nameMatch ? nameMatch[1] : 'Unknown';
+                    const group = groupMatch ? groupMatch[1] : 'Sin grupo';
+                    
+                    if (i + 1 < lines.length) {
+                        const url = lines[i + 1].trim();
+                        if (url && (url.startsWith('http://') || url.startsWith('https://'))) {
+                            channels.push({ name, url, group });
+                        }
+                    }
+                }
+            }
+            
+            if (channels.length > 0) {
+                displayChannels();
+                showStatus(`✅ ${channels.length} canales cargados correctamente`, 'success');
+                document.getElementById('stats').style.display = 'grid';
+                document.getElementById('totalChannels').textContent = channels.length;
+            } else {
+                showStatus('❌ No se encontraron canales válidos en el archivo', 'error');
+            }
+        }
+        
+        function displayChannels() {
+            const container = document.getElementById('channelsList');
+            container.innerHTML = '';
+            
+            const groups = {};
+            channels.forEach(ch => {
+                if (!groups[ch.group]) groups[ch.group] = [];
+                groups[ch.group].push(ch);
+            });
+            
+            Object.keys(groups).sort().forEach(groupName => {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'channel-group';
+                
+                const groupTitle = document.createElement('div');
+                groupTitle.className = 'group-title';
+                groupTitle.textContent = `📺 ${groupName} (${groups[groupName].length})`;
+                groupDiv.appendChild(groupTitle);
+                
+                groups[groupName].forEach(channel => {
+                    const btn = document.createElement('button');
+                    btn.className = 'channel-btn';
+                    btn.textContent = channel.name;
+                    btn.onclick = () => playChannel(channel, btn);
+                    groupDiv.appendChild(btn);
+                });
+                
+                container.appendChild(groupDiv);
+            });
+        }
+        
+        function playChannel(channel, button) {
+            const video = document.getElementById('videoPlayer');
+            
+            if (currentButton) currentButton.classList.remove('active');
+            button.classList.add('active');
+            currentButton = button;
+            
+            document.getElementById('currentChannel').textContent = channel.name.substring(0, 15) + '...';
+            
+            if (currentHls) currentHls.destroy();
+            
+            showStatus(`⏳ Cargando: ${channel.name}...`, 'info');
+            
+            if (Hls.isSupported()) {
+                currentHls = new Hls();
+                currentHls.loadSource(channel.url);
+                currentHls.attachMedia(video);
+                
+                currentHls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    video.play();
+                    showStatus(`✅ Reproduciendo: ${channel.name}`, 'success');
+                    document.getElementById('playbackStatus').textContent = '▶️';
+                });
+                
+                currentHls.on(Hls.Events.ERROR, function(event, data) {
+                    if (data.fatal) {
+                        showStatus(`❌ Error: ${channel.name} - ${data.type}`, 'error');
+                        document.getElementById('playbackStatus').textContent = '❌';
+                    }
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = channel.url;
+                video.addEventListener('loadedmetadata', () => {
+                    video.play();
+                    showStatus(`✅ Reproduciendo: ${channel.name}`, 'success');
+                    document.getElementById('playbackStatus').textContent = '▶️';
+                });
+            }
+        }
+        
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${type}`;
+        }
+        
+        const video = document.getElementById('videoPlayer');
+        video.addEventListener('playing', () => document.getElementById('playbackStatus').textContent = '▶️');
+        video.addEventListener('pause', () => document.getElementById('playbackStatus').textContent = '⏸️');
+    </script>
+</body>
+</html>

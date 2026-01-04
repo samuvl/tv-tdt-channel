@@ -117,7 +117,7 @@ def main():
             print(f"{i:2}. {name:<48} {tvg_id:<20}")
     
     # Crear fichero de referencia
-    output_file = "1.1-AVAILABLE_CHANNELS.txt"
+    output_file = "1.1-discovery_channels_result.txt"
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write("CANALES DISPONIBLES EN ESPAÑA (iptv-org)\n")
         f.write(f"Actualizado: 2026-01-04\n")

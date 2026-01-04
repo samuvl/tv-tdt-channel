@@ -1,69 +1,65 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="Energy.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Energy.svg/512px-Energy.svg.png" group-title="Entertainment",Energy (1080p)
-http://176.65.146.237:8401/play/a0ac/index.m3u8
-#EXTINF:-1 tvg-id="FactoriadeFiccion.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/FDF_2012.png/500px-FDF_2012.png" group-title="Entertainment",FDF (1080p)
-http://176.65.146.237:8401/play/a09p/index.m3u8
-#EXTINF:-1 tvg-id="LaSexta.es@SD" tvg-logo="https://i.imgur.com/aKV5voq.png" group-title="Entertainment",La Sexta (1080p)
-http://176.65.146.237:8401/play/a0af/index.m3u8
-#EXTINF:-1 tvg-id="Mega.es@SD" tvg-logo="https://i.imgur.com/Udrt2eK.png" group-title="Entertainment",Mega (1080p)
-http://176.65.146.237:8401/play/a0a5/index.m3u8
-#EXTINF:-1 tvg-id="Neox.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Neox_2023_logo.svg/500px-Neox_2023_logo.svg.png" group-title="Entertainment",Neox (1080p)
-http://176.65.146.237:8401/play/a0ag/index.m3u8
-#EXTINF:-1 tvg-id="ROTVValencia.es@SD" tvg-logo="https://i.imgur.com/0TDnVQ4.png" group-title="Entertainment",ROTV Valencia (720p)
-https://rotv.romediavalencia.com:3839/live/rotvlive.m3u8
-#EXTINF:-1 tvg-id="101tvCadiz.es@SD" tvg-logo="https://i.imgur.com/GzI3RC4.png" group-title="General",101tv Cádiz (1080p)
-https://streaming101tv.es:19360/cadiz/cadiz.m3u8
-#EXTINF:-1 tvg-id="101tvRonda.es@SD" tvg-logo="https://i.imgur.com/GzI3RC4.png" group-title="General",101tv Ronda (1080p)
-https://streaming101tv.es/hls/webronda.m3u8
-#EXTINF:-1 tvg-id="Canal7TeleValencia.es@SD" tvg-logo="https://i.imgur.com/ILfXDRs.png" group-title="General",7 TeleValencia (576p)
-https://play.cdn.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/028/playlist.m3u8
-#EXTINF:-1 tvg-id="Antena3.es@National" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Logo_Antena_3_2025_%28Naranja%29.svg/512px-Logo_Antena_3_2025_%28Naranja%29.svg.png" group-title="General",Antena 3 (1080p)
-http://176.65.146.237:8401/play/a0ae/index.m3u8
-#EXTINF:-1 tvg-id="Cuatro.es@SD" tvg-logo="https://i.imgur.com/NYLnABb.png" group-title="General",Cuatro (1080p)
-http://176.65.146.237:8401/play/a09s/index.m3u8
-#EXTINF:-1 tvg-id="Telecinco.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Telecinco.svg/512px-Telecinco.svg.png" group-title="General",Telecinco (1080p)
-http://176.65.146.237:8401/play/a09r/index.m3u8
-#EXTINF:-1 tvg-id="APunt.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Logotip_d%27%C3%80_Punt_%282017-%29.svg/512px-Logotip_d%27%C3%80_Punt_%282017-%29.svg.png" group-title="General;Public",A Punt
-https://bcovlive-a.akamaihd.net/8499d938ef904e39b58a4adec2ddeada/eu-west-1/6057955885001/playlist_dvr.m3u8
-#EXTINF:-1 tvg-id="AndaluciaTelevision.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Andaluc%C3%ADa_TV_2018_logo.svg/512px-Andaluc%C3%ADa_TV_2018_logo.svg.png" group-title="General;Public",Andalucía Televisión (1080p)
-http://176.65.146.237:8401/play/a09g/index.m3u8
-#EXTINF:-1 tvg-id="BonDiaTV.es@SD" tvg-logo="https://i.imgur.com/VgRCu2U.png" group-title="General;Public",Bon Dia TV (1080p)
-https://directes-tv-int.3catdirectes.cat/live-content/bondia-hls/master.m3u8
-#EXTINF:-1 tvg-id="CanalSur.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Canal_Sur_Televisi%C3%B3n_2011-2017_logo.svg/512px-Canal_Sur_Televisi%C3%B3n_2011-2017_logo.svg.png" group-title="General;Public",Canal Sur (1080p)
-http://176.65.146.237:8401/play/a09c/index.m3u8
-#EXTINF:-1 tvg-id="CanalSurAndalucia.es@SD" tvg-logo="https://i.imgur.com/lznnA4v.png" group-title="General;Public",Canal Sur Andalucia (1080p)
-https://dfk2a268yviz9.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ddiii1m6jt6of/CanalSurAndaluciaES.m3u8
-#EXTINF:-1 tvg-id="CanalSur2.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canal_Sur_2_-_2017_logo.png/500px-Canal_Sur_2_-_2017_logo.png" group-title="General;Public",Canal Sur Andalucía 2 (720p)
-https://cdnlive.codev8.net/rtvalive/smil:channel22.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="La1.es@SD" tvg-logo="https://i.imgur.com/1jDS9UC.png" group-title="General;Public",La 1 (720p)
+#EXTINF:-1 tvg-chno="1" tvg-id="La1.es@SD" tvg-logo="https://i.imgur.com/1jDS9UC.png"  group-title="TDT España",001. La 1
 https://ztnr.rtve.es/ztnr/1688877.m3u8
-#EXTINF:-1 tvg-id="La1.es@UHD" tvg-logo="https://i.imgur.com/1jDS9UC.png" group-title="General;Public",La 1 UHD (2160p)
-http://176.65.146.237:8401/play/a09u/index.m3u8
-#EXTINF:-1 tvg-id="La2.es@SD" tvg-logo="https://i.imgur.com/3NwzqoB.png" group-title="General;Public",La 2 (1080p)
+#EXTINF:-1 tvg-chno="2" tvg-id="La2.es@SD" tvg-logo="https://i.imgur.com/3NwzqoB.png"  group-title="TDT España",002. La 2
 https://d4g9wh8d4wiaw.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-crbrakk0yedqb/La2ES.m3u8
-#EXTINF:-1 tvg-id="Clan.es@SD" tvg-logo="https://i.imgur.com/03jFV68.png" group-title="Kids;Public",Clan (1280p)
+#EXTINF:-1 tvg-chno="3" tvg-id="Antena3.es@National" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Logo_Antena_3_2025_%28Naranja%29.svg/512px-Logo_Antena_3_2025_%28Naranja%29.svg.png"  group-title="TDT España",003. Antena 3
+http://176.65.146.237:8401/play/a0ae/index.m3u8
+#EXTINF:-1 tvg-chno="4" tvg-id="Cuatro.es@SD" tvg-logo="https://i.imgur.com/NYLnABb.png"  group-title="TDT España",004. Cuatro
+http://176.65.146.237:8401/play/a09s/index.m3u8
+#EXTINF:-1 tvg-chno="5" tvg-id="Telecinco.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Telecinco.svg/512px-Telecinco.svg.png"  group-title="TDT España",005. Telecinco
+http://176.65.146.237:8401/play/a09r/index.m3u8
+#EXTINF:-1 tvg-chno="6" tvg-id="LaSexta.es@SD" tvg-logo="https://i.imgur.com/aKV5voq.png"  group-title="TDT España",006. La Sexta
+http://176.65.146.237:8401/play/a0af/index.m3u8
+#EXTINF:-1 tvg-chno="7" tvg-id="APunt.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Logotip_d%27%C3%80_Punt_%282017-%29.svg/512px-Logotip_d%27%C3%80_Punt_%282017-%29.svg.png"  group-title="TDT España",007. A Punt
+https://bcovlive-a.akamaihd.net/8499d938ef904e39b58a4adec2ddeada/eu-west-1/6057955885001/playlist_dvr.m3u8
+#EXTINF:-1 tvg-chno="8" tvg-id="Canal7TeleValencia.es@SD" tvg-logo="https://i.imgur.com/ILfXDRs.png"  group-title="TDT España",008. 7 TeleValencia
+https://play.cdn.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/028/playlist.m3u8
+#EXTINF:-1 tvg-chno="9" tvg-id="Clan.es@SD" tvg-logo="https://i.imgur.com/03jFV68.png"  group-title="TDT España",009. Clan
 https://dum8zv1rbdjj2.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-x6uutpgph4tpt/ClanES.m3u8
-#EXTINF:-1 tvg-id="CortsValencianes.es@SD" tvg-logo="https://i.imgur.com/bVkRBg5.png" group-title="Legislative",Corts Valencianes (480p) [Not 24/7]
-https://streamserver3.seneca.tv/cval_live/cdn_enc_3/master.m3u8
-#EXTINF:-1 tvg-id="Divinity.es@SD" tvg-logo="https://i.imgur.com/o7fvEr6.png" group-title="Lifestyle",Divinity (1080p)
-http://176.65.146.237:8401/play/a09q/index.m3u8
-#EXTINF:-1 tvg-id="Nova.es@SD" tvg-logo="https://i.imgur.com/Vx1F4o5.png" group-title="Lifestyle",Nova (1080p)
+#EXTINF:-1 tvg-chno="10" tvg-id="Neox.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Neox_2023_logo.svg/500px-Neox_2023_logo.svg.png"  group-title="TDT España",010. Neox
+http://176.65.146.237:8401/play/a0ag/index.m3u8
+#EXTINF:-1 tvg-chno="11" tvg-id="Mega.es@SD" tvg-logo="https://i.imgur.com/Udrt2eK.png"  group-title="TDT España",011. Mega
+http://176.65.146.237:8401/play/a0a5/index.m3u8
+#EXTINF:-1 tvg-chno="12" tvg-id="Nova.es@SD" tvg-logo="https://i.imgur.com/Vx1F4o5.png"  group-title="TDT España",012. Nova
 http://176.65.146.237:8401/play/a0ah/index.m3u8
-#EXTINF:-1 tvg-id="OndaValenciaTV.es@SD" tvg-logo="https://i.imgur.com/6HxLUQd.png" group-title="Music;News",Onda Valencia (720p)
-https://cloudvideo.servers10.com:8081/8116/index.m3u8
-#EXTINF:-1 tvg-id="Atreseries.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Atreseries_2020_logo.svg/512px-Atreseries_2020_logo.svg.png" group-title="Series",Atreseries (1080p)
+#EXTINF:-1 tvg-chno="13" tvg-id="FactoriadeFiccion.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/FDF_2012.png/500px-FDF_2012.png"  group-title="TDT España",013. FDF
+http://176.65.146.237:8401/play/a09p/index.m3u8
+#EXTINF:-1 tvg-chno="14" tvg-id="Energy.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Energy.svg/512px-Energy.svg.png"  group-title="TDT España",014. Energy
+http://176.65.146.237:8401/play/a0ac/index.m3u8
+#EXTINF:-1 tvg-chno="15" tvg-id="Divinity.es@SD" tvg-logo="https://i.imgur.com/o7fvEr6.png"  group-title="TDT España",015. Divinity
+http://176.65.146.237:8401/play/a09q/index.m3u8
+#EXTINF:-1 tvg-chno="16" tvg-id="Atreseries.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Atreseries_2020_logo.svg/512px-Atreseries_2020_logo.svg.png"  group-title="TDT España",016. Atreseries
 http://176.65.146.237:8401/play/a0ai/index.m3u8
-#EXTINF:-1 tvg-id="AtreseriesInternacional.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Atreseries_2020_logo.svg/512px-Atreseries_2020_logo.svg.png" group-title="Series",Atreseries Internacional (1080p)
+#EXTINF:-1 tvg-chno="17" tvg-id="AtreseriesInternacional.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Atreseries_2020_logo.svg/512px-Atreseries_2020_logo.svg.png"  group-title="TDT España",017. Atreseries Internacional
 http://38.183.182.166:8000/play/a104/index.m3u8
-#EXTINF:-1 tvg-id="CurroJimenez.us@Spain" tvg-logo="https://i.imgur.com/e3biTY5.png" group-title="Series",Pluto TV Curro Jiménez (720p)
-https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5f1acd36779de70007a680d1/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&is_lat=1&platform=web&rdid=channel&tags=ROKU_CONTENT_TAGS
-#EXTINF:-1 tvg-id="Elencantadordeperros.us@Spain" tvg-logo="https://i.imgur.com/hYqjQ1n.png" group-title="Series",Pluto TV El Encantador de Perros (720p)
-https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/60e45687313c5f0007bc8e94/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&is_lat=1&platform=web&rdid=channel&serverSideAds=false&tags=ROKU_CONTENT_TAGS
-#EXTINF:-1 tvg-id="Empenosalobestia.us@Spain" tvg-logo="https://i.imgur.com/EOttSdW.png" group-title="Series",Pluto TV Empeños a lo bestia (720p) [Not 24/7]
-https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5f23102d5e239d00074b092a/master.m3u8?advertisingId=&appName=web&appVersion=5.14.0-0f5ca04c21649b8c8aad4e56266a23b96d73b83a&app_name=web&clientDeviceType=0&clientID=6fbead95-26b1-415d-998f-1bdef62d10be&clientModelNumber=na&deviceDNT=false&deviceId=6fbead95-26b1-415d-998f-1bdef62d10be&deviceLat=19.4358&deviceLon=-99.1441&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=88.0.4324.150&marketingRegion=VE&serverSideAds=false&sessionID=b8e5a857-714a-11eb-b532-0242ac110002&sid=b8e5a857-714a-11eb-b532-0242ac110002&userId=
-#EXTINF:-1 tvg-id="Punt3.es@SD" tvg-logo="https://i.imgur.com/i9tsnhD.png" group-title="Undefined",Punt 3 Vall Uixó (1080p)
+#EXTINF:-1 tvg-chno="18" tvg-id="ROTVValencia.es@SD" tvg-logo="https://i.imgur.com/0TDnVQ4.png"  group-title="TDT España",018. ROTV Valencia
+https://rotv.romediavalencia.com:3839/live/rotvlive.m3u8
+#EXTINF:-1 tvg-chno="19" tvg-id="OndaValenciaTV.es@SD" tvg-logo="https://i.imgur.com/6HxLUQd.png"  group-title="TDT España",019. Onda Valencia
+https://cloudvideo.servers10.com:8081/8116/index.m3u8
+#EXTINF:-1 tvg-chno="20" tvg-id="Punt3.es@SD" tvg-logo="https://i.imgur.com/i9tsnhD.png"  group-title="TDT España",020. Punt 3 Vall Uixó
 https://bit.controlstreams.com:5443/LiveApp/streams/punt3.m3u8
-#EXTINF:-1 tvg-id="TeleSafor.es@SD" tvg-logo="https://i.imgur.com/EowJfr0.png" group-title="Undefined",Tele Safor (720p) [Not 24/7]
+#EXTINF:-1 tvg-chno="21" tvg-id="TeleSafor.es@SD" tvg-logo="https://i.imgur.com/EowJfr0.png"  group-title="TDT España",021. Tele Safor
 https://video.telesafor.com/hls/video.m3u8
-#EXTINF:-1 tvg-id="TeleRibera.es@SD" tvg-logo="https://pbs.twimg.com/profile_images/780539549239902208/g2MfVVuY_400x400.jpg" group-title="Undefined",TeleRibera (720p) [Not 24/7]
+#EXTINF:-1 tvg-chno="22" tvg-id="TeleRibera.es@SD" tvg-logo="https://pbs.twimg.com/profile_images/780539549239902208/g2MfVVuY_400x400.jpg"  group-title="TDT España",022. TeleRibera
 https://video1.lhdserver.es/teleribera/live.m3u8
+#EXTINF:-1 tvg-chno="23" tvg-id="CortsValencianes.es@SD" tvg-logo="https://i.imgur.com/bVkRBg5.png"  group-title="TDT España",023. Corts Valencianes
+https://streamserver3.seneca.tv/cval_live/cdn_enc_3/master.m3u8
+#EXTINF:-1 tvg-chno="24" tvg-id="AndaluciaTelevision.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Andaluc%C3%ADa_TV_2018_logo.svg/512px-Andaluc%C3%ADa_TV_2018_logo.svg.png"  group-title="TDT España",024. Andalucía Televisión
+http://176.65.146.237:8401/play/a09g/index.m3u8
+#EXTINF:-1 tvg-chno="25" tvg-id="CanalSur.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Canal_Sur_Televisi%C3%B3n_2011-2017_logo.svg/512px-Canal_Sur_Televisi%C3%B3n_2011-2017_logo.svg.png"  group-title="TDT España",025. Canal Sur
+http://176.65.146.237:8401/play/a09c/index.m3u8
+#EXTINF:-1 tvg-chno="26" tvg-id="CanalSurAndalucia.es@SD" tvg-logo="https://i.imgur.com/lznnA4v.png"  group-title="TDT España",026. Canal Sur Andalucia
+https://dfk2a268yviz9.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ddiii1m6jt6of/CanalSurAndaluciaES.m3u8
+#EXTINF:-1 tvg-chno="27" tvg-id="CanalSur2.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Canal_Sur_2_-_2017_logo.png/500px-Canal_Sur_2_-_2017_logo.png"  group-title="TDT España",027. Canal Sur Andalucía 2
+https://cdnlive.codev8.net/rtvalive/smil:channel22.smil/playlist.m3u8
+#EXTINF:-1 tvg-chno="28" tvg-id="101tvCadiz.es@SD" tvg-logo="https://i.imgur.com/GzI3RC4.png"  group-title="TDT España",028. 101tv Cádiz
+https://streaming101tv.es:19360/cadiz/cadiz.m3u8
+#EXTINF:-1 tvg-chno="29" tvg-id="101tvRonda.es@SD" tvg-logo="https://i.imgur.com/GzI3RC4.png"  group-title="TDT España",029. 101tv Ronda
+https://streaming101tv.es/hls/webronda.m3u8
+#EXTINF:-1 tvg-chno="30" tvg-id="CurroJimenez.us@Spain" tvg-logo="https://i.imgur.com/e3biTY5.png"  group-title="TDT España",030. Pluto TV Curro Jiménez
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5f1acd36779de70007a680d1/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&is_lat=1&platform=web&rdid=channel&tags=ROKU_CONTENT_TAGS
+#EXTINF:-1 tvg-chno="31" tvg-id="Elencantadordeperros.us@Spain" tvg-logo="https://i.imgur.com/hYqjQ1n.png"  group-title="TDT España",031. Pluto TV El Encantador de Perros
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/60e45687313c5f0007bc8e94/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&is_lat=1&platform=web&rdid=channel&serverSideAds=false&tags=ROKU_CONTENT_TAGS
+#EXTINF:-1 tvg-chno="32" tvg-id="Empenosalobestia.us@Spain" tvg-logo="https://i.imgur.com/EOttSdW.png"  group-title="TDT España",032. Pluto TV Empeños a lo bestia
+https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5f23102d5e239d00074b092a/master.m3u8?advertisingId=&appName=web&appVersion=5.14.0-0f5ca04c21649b8c8aad4e56266a23b96d73b83a&app_name=web&clientDeviceType=0&clientID=6fbead95-26b1-415d-998f-1bdef62d10be&clientModelNumber=na&deviceDNT=false&deviceId=6fbead95-26b1-415d-998f-1bdef62d10be&deviceLat=19.4358&deviceLon=-99.1441&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=88.0.4324.150&marketingRegion=VE&serverSideAds=false&sessionID=b8e5a857-714a-11eb-b532-0242ac110002&sid=b8e5a857-714a-11eb-b532-0242ac110002&userId=
